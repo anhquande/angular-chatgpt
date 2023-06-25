@@ -3,7 +3,9 @@ import { merge } from 'lodash';
 
 const commonEnvironment: Environment = {
   production: false,
-  openaiApiUrl: 'https://api.openai.com/v1/engines/davinci-codex/completions',
+  useMockOpenai: false,
+  mockOpenaiUrl: '',
+  openaiOrganizationId: 'your_openai_organization_id',
   openaiApiKey: 'your_development_openai_api_key', // replace with your actual OpenAI API key for development
 };
 

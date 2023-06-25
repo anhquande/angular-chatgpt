@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Select, Store } from '@ngxs/store';
 import { NgForm } from '@angular/forms';
-import { ChatService } from '../services/chat.service';
 import { Observable } from 'rxjs';
 import {
   actionsExecuting,

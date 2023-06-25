@@ -26,8 +26,10 @@
     "@ngxs-labs/actions-executing": "^1.0.6",
     "@ngxs/store": "^3.8.1",
     "@types/lodash": "^4.14.195",
+    "axios": "^1.4.0",
     "immer": "^10.0.2",
     "lodash": "^4.17.21",
+    "openai": "^3.3.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
@@ -36,6 +38,7 @@
     "@angular-devkit/build-angular": "^16.1.1",
     "@angular/cli": "~16.1.1",
     "@angular/compiler-cli": "^16.1.0",
+    "@types/axios": "^0.14.0",
     "@types/jasmine": "~4.3.0",
     "husky": "^8.0.3",
     "jasmine-core": "~4.6.0",

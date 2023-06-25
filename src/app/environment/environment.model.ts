@@ -1,5 +1,7 @@
 export interface Environment {
   production: boolean;
   openaiApiKey: string;
-  openaiApiUrl: string;
+  openaiOrganizationId: string;
+  useMockOpenai: boolean;
+  mockOpenaiUrl: string;
 }

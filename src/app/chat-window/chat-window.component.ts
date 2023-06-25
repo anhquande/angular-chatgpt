@@ -6,10 +6,9 @@ import {
   ViewChild,
 } from '@angular/core';
 import { Select, Store } from '@ngxs/store';
-import { Observable, takeUntil } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Message } from '../state/chat/chat.model';
 import { AppStateModel } from '../state/app.model';
-import { AddMessage } from '../state/chat/chat.actions';
 import { UntilDestroy, untilDestroyed } from '@ngneat/until-destroy';
 
 @UntilDestroy()

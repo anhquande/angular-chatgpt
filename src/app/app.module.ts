@@ -18,6 +18,9 @@ import { MatListModule } from '@angular/material/list';
 import { NgxsActionsExecutingModule } from '@ngxs-labs/actions-executing';
 import { ChatMessageComponent } from './chat-message/chat-message.component';
 import { HumanizeTimestampPipe } from './pipes/humanize-timestamp/humanize-timestamp.pipe';
+import { CHAT_SERVICE_TOKEN } from './services/chat.service.token';
+import { OpenaiService } from './services/openai.service';
+import { MockChatService } from './services/mock-chat.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +43,9 @@ import { HumanizeTimestampPipe } from './pipes/humanize-timestamp/humanize-times
     MatListModule,
     MatGridListModule,
   ],
-  providers: [ChatState],
+  providers: [
+    { provide: CHAT_SERVICE_TOKEN, useClass: MockChatService },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -10,7 +10,8 @@ import {
   GetReplySuccess,
 } from './chat.actions';
 import { produce } from 'immer';
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
+import { CHAT_SERVICE_TOKEN } from 'src/app/services/chat.service.token';
 
 @Injectable()
 @State<ChatStateModel>({
@@ -18,7 +19,9 @@ import { Injectable } from '@angular/core';
   defaults: initializeChatState(),
 })
 export class ChatState {
-  constructor(private chatService: ChatService) {}
+  private chatService: ChatService = inject(CHAT_SERVICE_TOKEN);
+
+  constructor() {}
 
   @Action(GetReply)
   public getReply(ctx: StateContext<ChatStateModel>, action: GetReply) {
