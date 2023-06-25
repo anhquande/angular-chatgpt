@@ -1,0 +1,14 @@
+.input-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.input-container mat-form-field {
+  flex-grow: 1;
+  margin-right: 8px; /* Optional: Add margin between input field and submit button */
+}
+
+.input-container button {
+  min-width: 80px; /* Optional: Adjust the width of the submit button */
+}

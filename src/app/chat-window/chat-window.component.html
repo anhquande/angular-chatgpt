@@ -1,0 +1,5 @@
+<mat-grid-list cols="1" class="chat-window" #messageList>
+  <mat-list-item *ngFor="let message of messages$ | async" class="message">
+    <app-chat-message [message]="message"></app-chat-message>
+  </mat-list-item>
+</mat-grid-list>

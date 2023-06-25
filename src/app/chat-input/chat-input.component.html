@@ -1,0 +1,17 @@
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+  <div class="input-container">
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="message"
+        ngModel
+        required
+        placeholder="Ask me anything"
+      />
+    </mat-form-field>
+    <button mat-button type="submit" [disabled]="getReplyExecuting$ | async">
+      Send
+    </button>
+  </div>
+</form>
